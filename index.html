@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Graph-based Mining of In-the-Wild, Fine-grained, Semantic Code Change Patterns</title>
+<meta charset="iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="styles/mediaqueries.css" type="text/css" media="all">
+<script src="scripts/jquery.1.9.0.min.js"></script>
+<script src="scripts/jquery-mobilemenu.min.js"></script>
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="styles/ie.css" type="text/css" media="all">
+<script src="scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="scripts/ie/ie9.js"></script>
+<script src="scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Graph-based Mining of In-the-Wild, Fine-grained, Semantic Code Change Patterns</a></h1>
+    </div>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="topnav">
+    <ul class="clear">
+      <li class="active first"><a href="index.html">Main</a></li>
+      <li><a href="patterns.html">Mined Patterns</a></li>
+      <li><a href="survey.html">Survey Responses</a></li>
+      <li><a href="comparison.html">Comparative Study</a></li>
+    </ul>
+  </nav>
+</div>
+<!-- content -->
+<div class="wrapper row3">
+  <div id="container">
+    <!-- ################################################################################################ -->
+    <div class="full_width clear">
+	<p>
+Prior research exploited the repetitiveness of code changes to enable
+several tasks such as code completion, bug-fix recommendation,
+library adaption, etc. These and other novel applications require
+accurate automated detection of repetitive changes, but the current
+state-of-the-art is limited to custom-tailored algorithms that detect
+specific kinds of changes at the syntactic level. Existing algorithms
+relying on syntactic similarity have lower accuracy, and cannot 
+effectively detect semantic change patterns. In this work, we introduce
+a novel graph-based mining approach, CPatMiner, to detect previously 
+unknown repetitive changes in the wild, by mining fine-grained
+semantic code change patterns from a large number of open-source
+repositories. To overcome unique challenges such as detecting meaningful 
+change patterns and scaling to large repositories, we rely on
+fine-grained change graphs that capture program dependencies.
+</p>
+<p>
+We evaluate CPatMiner by mining change patterns in a diverse
+corpus of 5,000+ open-source projects from GitHub across a population 
+of 170,000+ developers. We use three complementary methods.
+First, we sent the mined patterns to 108 open-source developers.
+We found that 70% of respondents recognized those patterns as
+their meaningful frequent changes. Moreover, 79% of respondents
+even named the patterns, and 44% wanted future IDEs to automate
+such repetitive changes. We found that the mined change patterns
+belong to various development activities: adaptive (9%), perfective
+(20%), corrective (35%) and preventive (36%, including all refactorings). 
+Second, we compared CPatMiner with the state-of-the-art,
+AST-based technique, and reported that CPatMiner detects 37 %
+more meangingful patterns. Third, we use CPatMiner to search
+for patterns in a corpus of 88 GitHub projects with longer histories
+consisting of 164M SLOCs. It constructed 322K fine-grained change
+graphs containing 3M nodes, and detected 17K instances of change
+patterns from which we provide unique insights on the practice of
+change patterns among individuals and teams. We found that a large
+percentage (75%) of the change patterns from individual developers
+are commonly shared with others, and this holds true for teams.
+Moreover, we found that the patterns are not intermittent but spread
+widely over time. Thus, we call for a community-based change pattern 
+database to provide important resources in novel applications.</p>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row4">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2013 - All Rights Reserved</p>
+    <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </footer>
+</div>
+</body>
+</html>
