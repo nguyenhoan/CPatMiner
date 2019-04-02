@@ -4,7 +4,7 @@
 * [Danny Dig](http://dig.cs.illinois.edu/)
 * [Michael Hilton](http://www.cs.cmu.edu/~mhilton/)
 * [Hoan Anh Nguyen](https://sites.google.com/site/nguyenanhhoan/) (Project Lead)
-* [Son Nguyen]()
+* Son Nguyen
 * [Tien N. Nguyen](http://www.utdallas.edu/~tien.n.nguyen/)
 * [Hieu Tran](https://utdallas.edu/~trunghieu.tran/)
 
