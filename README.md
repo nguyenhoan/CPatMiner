@@ -11,3 +11,6 @@
 ## Publications
 * [Graph-based Mining of In-the-Wild, Fine-grained, Semantic Code Change Patterns](https://2019.icse-conferences.org/event/icse-2019-technical-papers-graph-based-mining-of-in-the-wild-fine-grained-semantic-code-change-patterns) (The 41st ACM/IEEE International Conference on Software Engineering
 (ICSE 2019) - Technical Track)
+
+## License
+All software provided in this repository is subject to the [Apache License Version 2.0](LICENSE).
