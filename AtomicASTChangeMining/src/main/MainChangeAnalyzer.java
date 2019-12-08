@@ -46,12 +46,7 @@ public class MainChangeAnalyzer {
 		} else if (SystemUtils.IS_OS_MAC) {
 			THREAD_POOL_SIZE = 8;
 			pool = new NotifyingBlockingThreadPoolExecutor(THREAD_POOL_SIZE, THREAD_POOL_SIZE, 15, TimeUnit.SECONDS, 200, TimeUnit.MILLISECONDS, blockingTimeoutCallback);
-//			inputPath = "/Users/hoanamzn/eclipse-workspace/src";
-//			outputPath = "/Users/hoanamzn/output/change graphs/Guru";
-//			content = FileIO.readStringFromFile(inputPath + "/guru.csv");
-            inputPath = "/Users/hoanamzn/Downloads/amazon code";
-            outputPath = "/Users/hoanamzn/output/change graphs/amazon-code";
-            content = FileIO.readStringFromFile(inputPath + "/list.csv");
+            		content = FileIO.readStringFromFile(inputPath + "/list.csv");
 		} else if (SystemUtils.IS_OS_LINUX) {
 			THREAD_POOL_SIZE = 24;
 			pool = new NotifyingBlockingThreadPoolExecutor(THREAD_POOL_SIZE, THREAD_POOL_SIZE, 15, TimeUnit.SECONDS, 200, TimeUnit.MILLISECONDS, blockingTimeoutCallback);
