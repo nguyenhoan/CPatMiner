@@ -41,18 +41,6 @@ public class MineChangePatterns {
 		changesPath = "contains a set of GitHub repos each of which is in the structure of username/reponame/*.dat."
 				+ "E.g. inPath = repos-junit should contains junit-team/junit/*.dat"
 				+ "or inPath = repos could contains junit-team/junit/*.dat and JetBrains/intellij-community/*.dat";
-		if(SystemUtils.IS_OS_MAC){
-//			changesPath = "/Users/hoanamzn/output/change graphs/Guru";
-//			reposPath = "/Users/hoanamzn/eclipse-workspace/src";
-            changesPath = "/Users/hoanamzn/output/change graphs/amazon-code";
-            reposPath = "/Users/hoanamzn/Downloads/amazon code";
-		} else if (SystemUtils.IS_OS_LINUX) {
-			changesPath = "/home/hoan/github/change graphs/repos-99"; reposPath = "/home/hoan/github/repositories/java-stars-100";
-		} else if (SystemUtils.IS_OS_WINDOWS){
-			changesPath = "T:/change graphs/repos-5stars-50commits-fresh"; 
-			reposPath = "E:/github/repos-5stars-50commits";
-			
-		}
 		
 		if (args.length > 0) {
 			Pattern.mode = Integer.parseInt(args[0]);
@@ -145,24 +133,6 @@ public class MineChangePatterns {
 		File[] files = dir.listFiles();
 		if (files == null)
 			return graphs;
-//		HashMap<String, Integer> commitTime = (HashMap<String, Integer>) FileIO.readObjectFromFile("T:/github/repos-metadata/" + projectName.replace("/", "---") + ".time");
-//		Arrays.sort(files, new Comparator<File>() {
-//			@Override
-//			public int compare(File f1, File f2) {
-//				String name1 = f1.getName();
-//				if (name1.endsWith(".dat"))
-//					name1 = name1.substring(0, name1.length() - 4);
-//				else
-//					return 1;
-//				String name2 = f2.getName();
-//				if (name2.endsWith(".dat"))
-//					name2 = name2.substring(0, name2.length() - 4);
-//				else
-//					return -1;
-//				return commitTime.get(name2) - commitTime.get(name1);
-//			}
-//		});
-//        for (int i = 0; i < Math.min(files.length, 50); i++) {
         for (int i = 0; i < files.length; i++) {
 			File sub = files[i];
 			if (!sub.getName().endsWith(".dat")) continue;
@@ -188,19 +158,6 @@ public class MineChangePatterns {
 					g.pruneDoubleEdges();
 					g.setProject(projectName);
 					graphs.add(g);
-					// DEBUG
-					/*if (file.getName().equals("ddea0974608e74c284c65c82e18faa2ca02eb5d3.dat") && 
-							fp.equals("platform/lang-impl/src/com/intellij/openapi/fileEditor/impl/text/TextEditorPsiDataProvider.java") &&
-							method.equals("TextEditorPsiDataProvider,getData,#String#Editor#VirtualFile#")) {
-						System.out.println(method);
-						if (g.hasDuplicateEdge())
-							System.out.print("");
-						g.deleteAssignmentNodes();
-						Fragment f = new Fragment(0, new ArrayList<>(g.getNodes()));
-						//f.pruneClosure();
-						f.toGraphics("D:/temp", "changegraph");
-						System.out.print("");
-					}*/
 				}
 			}
 		}
