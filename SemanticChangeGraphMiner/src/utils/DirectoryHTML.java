@@ -82,6 +82,8 @@ public class DirectoryHTML {
                 "});\n" +
                 "</script>");
 
+        sb.append("</body></HTML>");
+
         FileIO.writeStringToFile(sb.toString(), dir + "/directory.html");
     }
 }
