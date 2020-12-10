@@ -38,7 +38,7 @@ public class Miner {
 		this.level = level;
 	}
 
-	public String getCurrDir()
+	public String getCurrDir() {
 		return currDir;
 	}
 
