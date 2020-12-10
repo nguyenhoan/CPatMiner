@@ -1,3 +1,7 @@
 .DS_Store
 */.classpath
 */.project
+
+.idea
+patterns depth corpus/
+patterns survey corpus 2017-03-03/

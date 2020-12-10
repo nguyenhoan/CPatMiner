@@ -15,11 +15,12 @@ public class DirectoryHTML {
     public void write(HashMap<Integer, ArrayList<ArrayList<String>>> foundPatterns, File dir) {
         //ADD helper Files
         try {
-//            Files.copy(Paths.get("src/resources/sortable.js"),Paths.get("output/patterns/sortable.js"), StandardCopyOption.REPLACE_EXISTING );
-            Files.copy(Paths.get("src/resources/jquery.dataTables.min.css"),Paths.get("output/patterns/jquery.dataTables.min.css"), StandardCopyOption.REPLACE_EXISTING );
-            Files.copy(Paths.get("src/resources/jquery-2.2.3.min.js"),Paths.get("output/patterns/jquery-2.2.3.min.js"), StandardCopyOption.REPLACE_EXISTING );
-            Files.copy(Paths.get("src/resources/default.css"),Paths.get("output/patterns/default.css"), StandardCopyOption.REPLACE_EXISTING );
-            Files.copy(Paths.get("src/resources/highlight.pack.js"),Paths.get("output/patterns/highlight.pack.js"), StandardCopyOption.REPLACE_EXISTING );
+            Files.copy(Paths.get("SemanticChangeGraphMiner/src/resources/sortable.js"),Paths.get("output/patterns/sortable.js"), StandardCopyOption.REPLACE_EXISTING );
+            Files.copy(Paths.get("SemanticChangeGraphMiner/src/resources/jquery.dataTables.min.js"),Paths.get("output/patterns/jquery.dataTables.min.js"), StandardCopyOption.REPLACE_EXISTING );
+            Files.copy(Paths.get("SemanticChangeGraphMiner/src/resources/jquery.dataTables.min.css"),Paths.get("output/patterns/jquery.dataTables.min.css"), StandardCopyOption.REPLACE_EXISTING );
+            Files.copy(Paths.get("SemanticChangeGraphMiner/src/resources/jquery-2.2.3.min.js"),Paths.get("output/patterns/jquery-2.2.3.min.js"), StandardCopyOption.REPLACE_EXISTING );
+            Files.copy(Paths.get("SemanticChangeGraphMiner/src/resources/default.css"),Paths.get("output/patterns/default.css"), StandardCopyOption.REPLACE_EXISTING );
+            Files.copy(Paths.get("SemanticChangeGraphMiner/src/resources/highlight.pack.js"),Paths.get("output/patterns/highlight.pack.js"), StandardCopyOption.REPLACE_EXISTING );
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -80,6 +81,8 @@ public class DirectoryHTML {
                 "    \t);\n" +
                 "});\n" +
                 "</script>");
+
+        sb.append("</body></HTML>");
 
         FileIO.writeStringToFile(sb.toString(), dir + "/directory.html");
     }
